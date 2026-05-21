@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FotoKisk (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "FotoKisk (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
