@@ -16,7 +16,7 @@
   <mp:PhoneIdentity PhoneProductId="50A05832-AEED-49F8-A781-38E932AB7416" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>FotoKisk</DisplayName>
+    <DisplayName>FotoKiosk</DisplayName>
     <PublisherDisplayName>AppPublisher</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -35,8 +35,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="FotoKisk"
-        Description="FotoKisk"
+        DisplayName="FotoKiosk"
+        Description="FotoKiosk"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
