@@ -5,9 +5,9 @@ namespace FotoKiosk.Services;
 public interface IPhotoService
 {
     string GetDirectory();
-    
+
     Task<IEnumerable<RollercoasterPhoto>> GetPhotosAsync(string directoryPath);
-    
+
     Task<IEnumerable<RollercoasterPhoto[]>> GroupPhotosAsync(IEnumerable<RollercoasterPhoto> photos);
 
     string GetFolderName(DayOfWeek dayOfWeek)
