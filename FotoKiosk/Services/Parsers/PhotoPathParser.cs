@@ -4,6 +4,12 @@ namespace FotoKiosk.Services.Parsers;
 
 public static class PhotoPathParser
 {
+    /// <summary>
+    /// Parses a roller‑coaster photo file name into a <see cref="RollercoasterPhoto"/> instance.
+    /// </summary>
+    /// <param name="filePath">The full path to the photo file.</param>
+    /// <returns>A <see cref="RollercoasterPhoto"/> object</returns>
+    /// <exception cref="FormatException">Thrown when the file name does not conform to the expected pattern.</exception>
     public static RollercoasterPhoto Parse(string filePath)
     {
         var nameWithoutExtension = Path.GetFileNameWithoutExtension(filePath);
@@ -30,5 +36,4 @@ public static class PhotoPathParser
             Metadata = metadata,
         };
     }
-
 }
