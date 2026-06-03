@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <Page
     x:Class="FotoKiosk.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -16,32 +17,29 @@
     -->
     <Grid RowDefinitions="*, Auto" Background="#F1F5F9">
         <StackPanel Grid.Row="0"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center">
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
 
-            <TextBlock 
-        Text="Welkom bij de Foto Kiosk!"
-        FontSize="28"
-        FontWeight="SemiBold"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Margin="0,20" />
+            <TextBlock
+                Text="Welkom bij de Foto Kiosk!"
+                FontSize="28"
+                FontWeight="SemiBold"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,20" />
         </StackPanel>
         <StackPanel Grid.Row="1" Background="#FFDADEE3" Height="50" HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Orientation="Horizontal"
-                    Margin="50"
-                    
-                    >
-            
-            <Button 
+                    Margin="50">
+
+            <Button
                 Content="start"
                 Height="50"
                 Width="250"
                 Background="#2563EB"
-                Click="StartButtonClicked"
-            />
+                Click="StartButtonClicked" />
         </StackPanel>
 
-    </Grid >
+    </Grid>
 </Page>
