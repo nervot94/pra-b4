@@ -39,6 +39,7 @@
                 Height="50"
                 Width="250"
                 Background="#2563EB"
+                Click="StartButtonClicked"
             />
         </StackPanel>
 

@@ -1,3 +1,4 @@
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -16,5 +17,10 @@ public sealed partial class MainPage : Page
         InitializeComponent();
 
         // TODO: Add your initialization logic here.
+    }
+
+    private void StartButtonClicked(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(GalleryPage));
     }
 }
