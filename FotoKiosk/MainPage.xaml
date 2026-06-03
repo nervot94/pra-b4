@@ -14,5 +14,33 @@
         Use 'dotnet new winui-page' to create additional pages and navigate to them via
         the Frame in MainWindow (RootFrame).
     -->
-    <Grid />
+    <Grid RowDefinitions="*, Auto" Background="#F1F5F9">
+        <StackPanel Grid.Row="0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center">
+
+            <TextBlock 
+        Text="Welkom bij de Foto Kiosk!"
+        FontSize="28"
+        FontWeight="SemiBold"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Margin="0,20" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Background="#FFDADEE3" Height="50" HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal"
+                    Margin="50"
+                    
+                    >
+            
+            <Button 
+                Content="start"
+                Height="50"
+                Width="250"
+                Background="#2563EB"
+            />
+        </StackPanel>
+
+    </Grid >
 </Page>
