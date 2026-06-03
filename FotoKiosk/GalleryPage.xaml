@@ -36,7 +36,8 @@
                   Padding="20"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  SelectionMode="Multiple" />
+                  SelectionMode="Multiple"
+                  SelectionChanged="ImageGridView_SelectionChanged" />
 
         <Grid Grid.Row="1" Background="#FFDADEE3" Height="50">
             <Grid.ColumnDefinitions>
@@ -49,7 +50,7 @@
             <TextBlock Grid.Column="0"
                        Margin="10,0"
                        VerticalAlignment="Center"
-                       Text="Aantal fotos geselecteerd: 0" />
+                       Text="{x:Bind SelectedCountText, Mode=OneWay}" />
 
             <!-- Right Aligned Button Panel -->
             <StackPanel Grid.Column="2"
