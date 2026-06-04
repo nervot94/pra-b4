@@ -76,4 +76,10 @@ public sealed partial class GalleryPage : Page, INotifyPropertyChanged
     {
         SelectedCount = ImageGridView.SelectedItems.Count;
     }
+
+    private void OrderButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        var pageData = new ImageListPageData { Images = Images };
+        Frame.Navigate(typeof(CheckoutPage), pageData);
+    }
 }

@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using FotoKiosk.Models;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -23,8 +25,21 @@ namespace FotoKiosk;
 /// </summary>
 public sealed partial class CheckoutPage : Page
 {
+    public ObservableCollection<RollercoasterPhoto> SelectedImages { get; set;  } = [];
+    
     public CheckoutPage()
     {
         InitializeComponent();
     }
+    
+    protected override void OnNavigatedTo(NavigationEventArgs e)
+    {
+        base.OnNavigatedTo(e);
+
+        if (e.Parameter is ImageListPageData pageData)
+        {
+            SelectedImages = pageData.Images;
+        }
+    }
+
 }

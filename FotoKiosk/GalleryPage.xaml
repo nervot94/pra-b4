@@ -56,8 +56,10 @@
             <StackPanel Grid.Column="2"
                         Orientation="Horizontal"
                         Spacing="5">
-                <Button Margin="10,0"
+                <Button x:Name="OrderButton"
+                        Margin="10,0"
                         VerticalAlignment="Center"
+                        Click="OrderButton_OnClick"
                         Content="Bestellen" />
             </StackPanel>
         </Grid>
