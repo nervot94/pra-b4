@@ -10,11 +10,11 @@ public class LocalPhotoService : IPhotoService
 
     public string GetDirectory()
     {
-        var currentDirectory = Directory.GetCurrentDirectory();
+        var appDirectory = AppContext.BaseDirectory;
         var currentDate = DateTime.Now;
 
         var folder = ((IPhotoService)this).GetFolderName(currentDate.DayOfWeek);
-        return Path.Combine(currentDirectory, "fotos", folder);
+        return Path.Combine(appDirectory, "fotos", folder);
     }
 
     // I hope this parallel stuff works fine lol

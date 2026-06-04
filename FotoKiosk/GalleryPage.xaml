@@ -18,7 +18,7 @@
                     BorderThickness="2"
                     CornerRadius="4"
                     Margin="10">
-                <Image Source="{x:Bind FilePath}" Stretch="UniformToFill" />
+                <Image Source="{x:Bind ImageSource}" Stretch="UniformToFill" />
             </Border>
         </DataTemplate>
 
