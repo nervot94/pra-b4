@@ -79,7 +79,12 @@ public sealed partial class GalleryPage : Page, INotifyPropertyChanged
 
     private void OrderButton_OnClick(object sender, RoutedEventArgs e)
     {
-        var pageData = new ImageListPageData { Images = Images };
+        var selectedImages = ImageGridView.SelectedItems
+            .OfType<RollercoasterPhoto>()
+            .ToList();
+
+        var pageData = new ImageListPageData { Images = selectedImages };
+
         Frame.Navigate(typeof(CheckoutPage), pageData);
     }
 }
