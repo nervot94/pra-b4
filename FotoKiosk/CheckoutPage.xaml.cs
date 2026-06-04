@@ -26,7 +26,9 @@ public sealed partial class CheckoutPage : Page
 
         if (e.Parameter is ImageListPageData pageData)
         {
-            SelectedImages = pageData.Images;
+            SelectedImages = new ObservableCollection<RollercoasterPhoto>(pageData.Images);
+            
+            Console.WriteLine($"Selected images count: {SelectedImages.Count}");
         }
     }
 

@@ -1,8 +1,6 @@
-﻿using System.Collections.ObjectModel;
-
-namespace FotoKiosk.Models;
+﻿namespace FotoKiosk.Models;
 
 public class ImageListPageData()
 {
-    public required ObservableCollection<RollercoasterPhoto> Images { get; set; }
+    public required List<RollercoasterPhoto> Images { get; set; }
 }
