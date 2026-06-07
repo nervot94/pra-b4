@@ -4,11 +4,62 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FotoKiosk"
+    xmlns:models="using:FotoKiosk.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Page.Resources>
+        <DataTemplate x:Key="CheckoutItemTemplate" x:DataType="models:RollercoasterPhoto">
+            <Grid ColumnDefinitions="180, *" Margin="20,10" VerticalAlignment="Center">
+                <Border Width="180" Height="180"
+                        Background="White"
+                        BorderBrush="#DADEE3"
+                        BorderThickness="2"
+                        CornerRadius="4">
+                    <Image Source="{x:Bind ImageSource}" Stretch="UniformToFill" />
+                </Border>
 
+                <StackPanel Grid.Column="1" Margin="24,0" Spacing="24"
+                            VerticalAlignment="Center">
+                    <Grid RowDefinitions="Auto, Auto">
+                        <TextBlock Grid.Row="0" Text="Grootte" FontSize="14"
+                                   Foreground="#475569" />
+                        <Border Grid.Row="1" BorderBrush="#475569"
+                                BorderThickness="0,0,0,1" Margin="0,4,40,0">
+                            <TextBlock Text="10 x 15 cm" FontSize="18" />
+                        </Border>
+                    </Grid>
+
+                    <Grid RowDefinitions="Auto, Auto">
+                        <TextBlock Grid.Row="0" Text="Prijs" FontSize="14"
+                                   Foreground="#475569" />
+                        <Border Grid.Row="1" BorderBrush="#475569"
+                                BorderThickness="0,0,0,1" Margin="0,4,40,0">
+                            <TextBlock Text="€ 2,50" FontSize="18" />
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid RowDefinitions="*, Auto" Background="#F1F5F9">
+        <ScrollViewer Grid.Row="0" Padding="20"
+                      VerticalScrollBarVisibility="Auto">
+            <ItemsControl
+                ItemsSource="{x:Bind SelectedImages, Mode=OneWay}"
+                ItemTemplate="{StaticResource CheckoutItemTemplate}" />
+        </ScrollViewer>
+
+        <Grid Grid.Row="1" Background="#FFDADEE3" Height="80">
+            <Button x:Name="CheckoutButton"
+                    Content="checkout"
+                    Width="250" Height="50"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="#2563EB"
+                    Click="CheckoutButton_OnClick" />
+        </Grid>
     </Grid>
 </Page>

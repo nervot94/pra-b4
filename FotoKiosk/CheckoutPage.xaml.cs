@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using FotoKiosk.Models;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 
@@ -13,7 +14,7 @@ namespace FotoKiosk;
 /// </summary>
 public sealed partial class CheckoutPage : Page
 {
-    public ObservableCollection<RollercoasterPhoto> SelectedImages { get; set;  } = [];
+    private ObservableCollection<RollercoasterPhoto> SelectedImages { get; set;  } = [];
     
     public CheckoutPage()
     {
@@ -27,9 +28,11 @@ public sealed partial class CheckoutPage : Page
         if (e.Parameter is ImageListPageData pageData)
         {
             SelectedImages = new ObservableCollection<RollercoasterPhoto>(pageData.Images);
-            
-            Console.WriteLine($"Selected images count: {SelectedImages.Count}");
         }
     }
 
+    private void CheckoutButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(MainPage));
+    }
 }
